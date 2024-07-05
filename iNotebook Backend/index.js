@@ -3,7 +3,7 @@ import express from 'express';
 import authRoutes from './routes/auth.js'; 
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 connectDB();
 
