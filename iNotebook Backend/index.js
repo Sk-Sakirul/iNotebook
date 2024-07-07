@@ -1,6 +1,7 @@
 import connectDB from './db.js';
 import express from 'express';
 import authRoutes from './routes/auth.js'; 
+import noteRoutes from './routes/notes.js';
 
 const app = express();
 const port = 5000;
@@ -12,6 +13,8 @@ app.use(express.json()); // Parse JSON bodies
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/notes', noteRoutes)
+
 
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`);
